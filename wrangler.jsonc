@@ -1,0 +1,10 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "blackhole",
+  "compatibility_date": "2026-09-25",
+  // 纯静态站点：只上传 vite build 的产物，没有 Worker 脚本
+  "assets": {
+    "directory": "./dist"
+  },
+  "routes": [{ "pattern": "blackhole.huanan.app", "custom_domain": true }]
+}
